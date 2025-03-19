@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính vay ngân hàng</title>
+</head>
+<body>
+<h2>Máy tính vay ngân hàng</h2>
+<button id="tinhToanBtn" onclick="tinhTienVay()">Tính toán</button>
+<h3>Kết quả</h3>
+<p>Tổng tiền lãi phải trả: <span id="tongLai"></span></p>
+<p>Tổng tiền gốc và lãi: <span id="tongTra"></span></p>
+
+<script>
+    function tinhTienVay() {
+        let tienVay = 50000000;
+        let laiSuatThang = 1.2 / 100;
+        let soNamVay = 3;
+
+        let soThangVay = soNamVay * 12;
+        let tongTienLai = tienVay * laiSuatThang * soThangVay;
+        let tongTienTra = tienVay + tongTienLai;
+
+        document.getElementById("tongLai").innerText = tongTienLai + " VNĐ";
+        document.getElementById("tongTra").innerText = tongTienTra + " VNĐ";
+    }
+</script>
+</body>
+</html>
